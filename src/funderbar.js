@@ -39,12 +39,16 @@
     //Code Goes Below
     //For your code remember to subtract b from a
     //a - b
+    var result = a - b;
+    return result;
 
   }
 
   //_.multiply takes two numbers as parameters and returns their product
   _.multiply = function (a, b) {
     //Code Goes Below
+    var result = a * b;
+    return result;
 
   }
 
@@ -52,6 +56,8 @@
   _.divide = function (a, b) {
     //Code Goes Below
     //a divided by b
+    var result = a / b;
+    return result;
 
   }
 
@@ -59,12 +65,17 @@
   _.remainderOperator = function (a, b) {
     //Code Goes Below
     //return the remainder of a divided by b
+    var result = a % b;
+    return result;
   }
 
   //_.increment takes a number as a parameter and increces it by 1
   // Ensure you use the proper increment operator(not a+1)
   _.increment = function (a) {
     //Code Goes Below
+    var result = a;
+    result += 1;
+    return result;
 
   }
 
@@ -72,6 +83,9 @@
   // Ensure you use the proper decrement operator (not a-1)
   _.decrement = function (a) {
     //Code Goes Below
+    var result = a;
+    result -= 1;
+    return result;
 
   }
 
