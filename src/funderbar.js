@@ -270,6 +270,13 @@
 
   _.objectCreationBracket = (a, b, c) => {
     //Code Goes Below
+    let obj = {
+      firstName: a,
+      lastName: b,
+      zord: c
+    }
+
+    return obj;
 
   }
 
@@ -277,11 +284,19 @@
 
   _.objectCreationDot = (a, b, c) => {
     //Code Goes Below
+    var obj = {};
+
+    obj.firstName = a;
+    obj.lastName = b;
+    obj.zord = c;
+    return obj;
 
   }
 
   _.objectValue = (a, b) => {
     //Code Goes Below
+    var result = a[b];
+    return result;
 
   }
 
@@ -294,6 +309,17 @@
   //Loop through the given array and return the total sum of all the numbers in the array.
   _.forOf = (a) => {
     //Code Goes Below
+    var result = 0;
+    var array = a;
+
+    for (let x = 0; x < array.length; x++) {
+      if (typeof array[x] === 'number') {
+        result += array[x];
+      }
+    }
+
+    return result;
+
 
   }
 
@@ -302,6 +328,14 @@
   //example array.push(value)
   _.forInKeys = (a) => {
     //Code Goes Below
+    var array = a;
+    var result = [];
+
+    for (let arr in array) {
+      result.push(arr);
+    }
+    console.log(result);
+    return result;
 
   }
 
@@ -309,6 +343,13 @@
   //This is similar to the above function but needs a little digging to get the value.
   _.forInValues = (a) => {
     //Code Goes Below
+    var array = a;
+    var result = [];
 
+    for (let arr in array) {
+      result.push(array[arr]);
+    }
+    console.log(result);
+    return result;
   }
 }());
