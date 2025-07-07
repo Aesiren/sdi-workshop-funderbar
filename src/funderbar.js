@@ -108,24 +108,32 @@
   //_.same takes two parameters and returns whether they are the equal or not
   _.same = function (a, b) {
     //Code Goes Below
+    var result = a === b ? true : false;
+    return result;
 
   }
 
   //_.greater takes two numbers as parameters and checks if a is greater than b
   _.greater = function (a, b) {
     //Code Goes Below
+    var result = a > b ? true : false;
+    return result;
 
   }
 
   //_.lessThan takes two numbers as parameters and checks if a is less than b
   _.lessThan = function (a, b) {
     //Code Goes Below
+    var result = a < b ? true : false;
+    return result;
 
   }
 
   //_.falsyOrTruthy takes a parameter and determines whether it is TRUTHY or FALSY
   _.falsyOrTruthy = function (a) {
     //Code Goes Below
+    var result = a ? true : false;
+    return result;
 
   }
 
@@ -141,12 +149,15 @@
   //_.andAnd will be using the && comparator
   _.andAnd = function (a, b, c, d) {
     //Code Goes Below
-
+    var result = _.same(a, b) && _.same(c, d) ? true : false;
+    return result;
   }
 
   //_.orOr will be using the || comparator
   _.orOr = function (a, b, c, d) {
     //Code Goes Below
+    var result = _.same(a, b) || _.same(c, d) ? true : false;
+    return result;
 
   }
 
@@ -154,12 +165,16 @@
   //Create a basic if statement to pass the tests.
   _.ifLogic = function (a, b) {
     //Code Goes Below
+    var result = _.same(a, b) ? "Great" : undefined;
+    return result;
 
   }
 
   //Create a basic if else statement to pass the tests.
   _.ifElseLogic = function (a, b) {
     //Code Goes Below
+    var result = _.same(a, b) ? "Great" : "Good";
+    return result;
 
   }
 
@@ -167,12 +182,31 @@
   //Return the array as a single string.
   _.forLoop = function (a) {
     //Code Goes Below
+    var array = a;
+    var result = "";
+
+    for (var x = 0; x < array.length; x++) {
+      result = result + array[x];
+    }
+
+    return result;
 
   }
 
   //Using NESTED for loops, iterate through an array or arrays
   _.nestedForLoop = function (a) {
     //Code Goes Below
+    var array = a;
+    var result = 0;
+
+    for (var x = 0; x < array.length; x++) {
+      for (var y = 0; y < array[x].length; y++) {
+        result += array[x][y];
+      }
+    }
+
+    return result;
+
 
   }
 
@@ -180,6 +214,14 @@
   //If an index in the array is not a number add 1 to the above mentioned variable
   _.forIfElseNum = function (a) {
     //Code Goes Below
+    var numResult = 0;
+    var array = a;
+
+    for (var x = 0; x < array.length; x++) {
+      numResult += typeof array[x] === 'number' ? array[x] : 1;
+    }
+
+    return numResult;
 
   }
 
@@ -187,6 +229,14 @@
   //If an index in the array is not a string add and empty string ("") to the local variable
   _.forIfElseStr = function (a) {
     //Code Goes Below
+    var strResult = "";
+    var array = a;
+
+    for (var x = 0; x < array.length; x++) {
+      strResult += typeof array[x] === 'string' ? array[x] : "";
+    }
+
+    return strResult;
 
   }
 
@@ -195,6 +245,17 @@
   //You may notice you did this work already in previous functions but need to combine them in some way. Ideally, you should call the previous two functions in your implementation instead of copy/pasting the 'guts'.
   _.ifElseFor = function (a, b) {
     //Code Goes Below
+    var check = b;
+    var array = a;
+    var result;
+
+    if (check === 'string') {
+      result = _.forIfElseStr(a);
+    } else if (check === 'number') {
+      result = _.forIfElseNum(a);
+    }
+
+    return result;
 
   }
 
