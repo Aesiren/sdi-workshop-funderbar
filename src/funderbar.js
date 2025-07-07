@@ -312,9 +312,14 @@
     var result = 0;
     var array = a;
 
-    for (let x = 0; x < array.length; x++) {
-      if (typeof array[x] === 'number') {
-        result += array[x];
+    // for (let x = 0; x < array.length; x++) {
+    //   if (typeof array[x] === 'number') {
+    //     result += array[x];
+    //   }
+    // }
+    for (var arr of array) {
+      if (typeof arr === 'number') {
+        result += arr;
       }
     }
 
