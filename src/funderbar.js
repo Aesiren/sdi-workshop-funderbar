@@ -12,19 +12,25 @@
     // Declare a variable below that is assigned the value of input;
     var result = input;
     // return the above variable
-    return input;
+    return result;
   }
 
   //_.dataType is wanting you to determine the data type of what is being passed into it.
   // Return the datatype of input: ie. string or number or boolean etc.
   _.dataType = function (input) {
     //Code Goes Below
+    var result = typeof input;
+
+    return result;
 
   }
 
   //_.sum takes two numbers as parameters and returns their sum
   _.sum = function (a, b) {
     //Code Goes Below
+    var result = a + b;
+
+    return result;
 
   }
 
